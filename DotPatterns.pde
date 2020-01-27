@@ -35,6 +35,5 @@ void draw() {
   } else {
     theta = 0;
   }
-  
-  //delay(50);
+
 }
