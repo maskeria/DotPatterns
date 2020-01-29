@@ -1,9 +1,9 @@
-int n = 4000;
+int n = 2000;
 float rads = (radians(4));
 int theta = 0;
 Dot[] dots = new Dot[n];
 Dot[] funkyDots = new Dot[n];
-
+int change = 0;
 void setup() {
   size(1000, 1000);
   frameRate(100);
@@ -23,8 +23,9 @@ void draw() {
     
     pushMatrix();
     
-    rotate(radians(2));
-    translate(10*sin(theta), 10*cos(theta));
+    scale(1.05); // makes spirals
+    rotate(radians(4)); // produces concentric circles
+    translate(10*sin(0), 10*cos(0)); // moves the origin of the circles
     funkyDots[i].show();
     
     popMatrix();
@@ -35,5 +36,5 @@ void draw() {
   } else {
     theta = 0;
   }
-
+  //delay(100);
 }
